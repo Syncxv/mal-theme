@@ -1,0 +1,238 @@
+:root {
+    --title-screen-delay: 500ms;
+    --title-screen-duration: 1200ms;
+    --title-text-duration: 900ms;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.cover-block {
+    display: none !important;
+}
+
+.status-menu-container {
+    position: sticky;
+    top: 0;
+    border: none;
+    width: 100%;
+    height: auto !important;
+    box-shadow: 0px 0px 12px 2px hsl(0deg 0% 0% / 18%);
+}
+
+/*  CONTAINER FOR WHOLE THINGY */
+#list-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    border: none;
+    width: auto;
+    margin: 0;
+    background: linear-gradient(150deg, #cac0ff, #ffffff 25%);
+}
+
+/* THE LIST CONTAINER KINDA */
+.list-block {
+    width: 100%;
+    margin: 0 !important;
+}
+
+.list-unit {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+/* THE TITLE yk where it says all anime and stat and filters gg ez */
+.list-status-title {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    flex-direction: column;
+    width: 100% !important;
+    gap: 1rem;
+    padding: 1rem;
+    height: auto !important;
+}
+/* STATS */
+span.stats {
+    position: unset !important;
+}
+.list-table > tbody:nth-of-type(2n + 1) {
+    background-color: transparent;
+}
+tr.list-table-header > * {
+    width: auto !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+tr.list-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+}
+
+/* THE MAIN THINGY which contains all the anime :) */
+.list-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 0.1fr));
+    row-gap: 3rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    border: none !important;
+}
+
+/* YK the sort section, where you can click on score and 
+it will sort by highest score THAT BAR fuck i cant expain HEHEHHE HA
+BOTH these are for that btw */
+.list-table .list-table-header .header-title {
+    background: none !important;
+    border: none !important;
+}
+
+tbody:nth-child(1) {
+    position: absolute;
+    top: 12rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-status-title {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.text:first-child {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+tbody.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+}
+.list-table .list-table-data .data.status {
+    width: 50%;
+    border-radius: 500px;
+}
+.list-table .list-table-data .data {
+    border: none;
+}
+td.data.number {
+    display: none !important;
+}
+.list-table .list-table-data .data.image .image {
+    width: 13rem;
+    height: auto;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0px 0px 12px 2px hsl(0deg 0% 0% / 18%);
+}
+
+.icon-watch2,
+.icon-watch-pv2 {
+    display: none !important;
+}
+
+tr.list-table-data {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 20rem;
+    height: 30rem;
+}
+.list-table .list-table-data .data.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 14rem;
+    text-align: center;
+    max-width: 14rem;
+    text-align: center;
+}
+td.data.score::before {
+    content: "Score:";
+    font-weight: bold;
+}
+/* the title thginy at the start :) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #121212;
+    z-index: 2;
+    animation: bruh var(--title-screen-duration) cubic-bezier(0.55, 0.11, 0, 0.93) var(--title-screen-delay) forwards;
+}
+@keyframes bruh {
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+body::after {
+    content: "good day :)";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    z-index: 999;
+    animation: bruh2 var(--title-text-duration) cubic-bezier(0.76, 0.06, 0.15, 0.93) var(--title-screen-delay) forwards;
+}
+
+@keyframes bruh2 {
+    100% {
+        transform: translate(-50%, -1000%);
+    }
+}
+
+/* gg ez */
+
+td.data.status.watching::after {
+    content: "Watching eh";
+    color: white;
+    font-weight: bold;
+}
+td.data.status.completed::after {
+    content: "Completed eh";
+    color: white;
+    font-weight: bold;
+}
+td.data.status.onhold::after {
+    content: "On Hold eh";
+    color: black;
+    font-weight: bold;
+}
+td.data.status.dropped::after {
+    content: "Dropped eh";
+    color: white;
+    font-weight: bold;
+}
+td.data.status.plantowatch::after {
+    content: "May or may not watch this";
+    color: black;
+    font-weight: bold;
+}
