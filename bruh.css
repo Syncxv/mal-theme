@@ -114,6 +114,18 @@ tbody:nth-child(1) {
     justify-content: center;
 }
 
+.header-title.image {
+    display: none !important;
+}
+
+.header-title.number {
+    display: none !important;
+}
+
+.header-title.tags {
+    display: none !important;
+}
+
 .list-status-title {
     display: flex !important;
     align-items: center;
