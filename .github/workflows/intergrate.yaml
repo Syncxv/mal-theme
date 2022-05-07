@@ -13,6 +13,7 @@ jobs:
               uses: mujo-code/puppeteer-headful@master
               env:
                   CI: "true"
+                  GITHUB_TOKEN: ${{ github.token }}
             - name: screenshots-ci-action
               uses: flameddd/screenshots-ci-action@v1.1.1
               with:
