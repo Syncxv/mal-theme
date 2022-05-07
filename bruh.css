@@ -59,6 +59,11 @@ body {
     padding: 1rem;
     height: auto !important;
 }
+/* avg score and stuff yk */
+.list-stats {
+    display: block !important;
+    width: 100% !important;
+}
 /* STATS */
 span.stats {
     position: unset !important;
@@ -102,7 +107,7 @@ BOTH these are for that btw */
 
 tbody:nth-child(1) {
     position: absolute;
-    top: 12rem;
+    top: 12.7rem;
     width: 100%;
     display: flex;
     align-items: center;
