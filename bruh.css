@@ -21,7 +21,7 @@ body {
 }
 
 .status-menu-container {
-    position: sticky;
+    position: sticky !important;
     top: 0;
     border: none;
     width: 100%;
