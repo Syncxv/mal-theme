@@ -1,9 +1,17 @@
 :root {
+    --show-github-link: block;
     --title-screen-delay: 500ms;
     --title-screen-duration: 1200ms;
     --title-text-duration: 900ms;
 }
 
+/* link to repo */
+.list-status-title::before {
+    content: "theme link: https://github.com/Syncxv/my-anime-list-theme-HEHE";
+    color: white;
+    /* make the variable none if you dont want this gg ez */
+    display: var(--show-github-link);
+}
 body {
     overflow-x: hidden;
 }
