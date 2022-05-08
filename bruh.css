@@ -7,7 +7,7 @@
 
 /* link to repo */
 .list-status-title::before {
-    content: "theme link: https://github.com/Syncxv/my-anime-list-theme-HEHE";
+    content: "theme link: github.com/Syncxv/mal-theme";
     color: white;
     /* make the variable none if you dont want this gg ez */
     display: var(--show-github-link);
