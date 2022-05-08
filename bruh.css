@@ -101,7 +101,7 @@ tr.list-table-header {
     justify-items: center;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
     border: none !important;
 }
 
@@ -114,14 +114,12 @@ BOTH these are for that btw */
 }
 
 tbody:nth-child(1) {
-    position: absolute;
-    top: 12.7rem;
+    grid-column: 1 / -1;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .header-title.image {
     display: none !important;
 }
