@@ -76,6 +76,10 @@ body {
 span.stats {
     position: unset !important;
 }
+/* YK THE stats button inside span.stats NEXT TO THE FILTERS BUTTON YK */
+#show-stats-button {
+    display: none;
+}
 .list-table > tbody:nth-of-type(2n + 1) {
     background-color: transparent;
 }
