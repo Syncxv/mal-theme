@@ -80,9 +80,12 @@ span.stats {
 #show-stats-button {
     display: none;
 }
+/* idk why they did this but it use to be a near white color WHY? FOR WHAT REASON? */
 .list-table > tbody:nth-of-type(2n + 1) {
     background-color: transparent;
 }
+
+/* the anime, score, progress YEAH THAT the thingies where you can sort */
 tr.list-table-header > * {
     width: auto !important;
     display: flex !important;
@@ -97,26 +100,11 @@ tr.list-table-header {
     gap: 2rem;
 }
 
-/* THE MAIN THINGY which contains all the anime :) */
-.list-table {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 0.1fr));
-    row-gap: 3rem;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    border: none !important;
-}
-
-/* YK the sort section, where you can click on score and 
-it will sort by highest score THAT BAR fuck i cant expain HEHEHHE HA
-BOTH these are for that btw */
 .list-table .list-table-header .header-title {
     background: none !important;
     border: none !important;
 }
-
+/* LIST TABLE HEADER is the first tobdy :P so we makin it span the entire column or idk hHEE */
 tbody:nth-child(1) {
     grid-column: 1 / -1;
     width: 100%;
@@ -124,6 +112,8 @@ tbody:nth-child(1) {
     align-items: center;
     justify-content: center;
 }
+
+/* removing some stuff from the list table header bec they were for the table yk and not grid */
 .header-title.image {
     display: none !important;
 }
@@ -136,12 +126,26 @@ tbody:nth-child(1) {
     display: none !important;
 }
 
+/* THE MAIN THINGY which contains all the anime :) */
+.list-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 0.1fr));
+    row-gap: 3rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border: none !important;
+}
+/* THE TITLE yk where it says all anime or currently watching
+it also has the fliters and span button (the one i removed) HEHHE HA */
 .list-status-title {
     display: flex !important;
     align-items: center;
     justify-content: center;
     vertical-align: middle;
 }
+/* the all anime, currently watching etc text IN THE list statsu title gg ez */
 .text:first-child {
     display: flex !important;
     align-items: center;
