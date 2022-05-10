@@ -35,7 +35,8 @@ make sure you dont forget the `;` HEHHE HA
   
   
   ## Planned stuff
+  - [x] add variable for title text yk
   - [ ] i plan on adding a option for the gradient colors and positions of gradient maybe idk
-  - [ ] add variable for title text yk
+  
   
   
