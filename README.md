@@ -2,8 +2,8 @@ https://myanimelist.net/animelist/_Ariax
 
 
 # How to use this theme
-1. go to [main.css](https://github.com/Syncxv/mal-theme/blob/master/main.css)
-2. copy all of it and go [here](https://myanimelist.net/ownlist/style/theme/1)
+1. go to <a href="https://github.com/Syncxv/mal-theme/blob/master/main.css" target="_blank">main.css</a>
+2. copy all of it and go <a href="https://myanimelist.net/ownlist/style/theme/1" target="_blank">here</a>
 3. paste it in the custom css section like below
  
  
