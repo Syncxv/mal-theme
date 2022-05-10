@@ -16,7 +16,7 @@ body::before {
 }
 
 body::after {
-    content: "good day :)";
+    content: var(--title-text);
     position: absolute;
     top: 50%;
     left: 50%;

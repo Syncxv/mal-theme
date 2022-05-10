@@ -1,5 +1,6 @@
 :root {
   --show-github-link: block;
+  --title-text: "good day :)";
   --title-screen-delay: 500ms;
   --title-screen-duration: 1200ms;
   --title-text-duration: 900ms;
@@ -227,7 +228,7 @@ body::before {
   }
 }
 body::after {
-  content: "good day :)";
+  content: var(--title-text);
   position: absolute;
   top: 50%;
   left: 50%;
