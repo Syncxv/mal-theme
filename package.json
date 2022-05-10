@@ -1,0 +1,16 @@
+{
+    "name": "mal",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/Syncxv/my-anime-list-theme-HEHE.git",
+    "author": "Syncxv <aruldevarackal1@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "sass --no-source-map --watch src:.",
+        "build": "sass --no-source-map src:."
+    },
+    "devDependencies": {
+        "node-sass": "^7.0.1",
+        "sass": "^1.51.0"
+    }
+}

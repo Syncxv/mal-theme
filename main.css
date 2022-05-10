@@ -1,0 +1,246 @@
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --show-github-link: block;
+  --title-screen-delay: 500ms;
+  --title-screen-duration: 1200ms;
+  --title-text-duration: 900ms;
+}
+
+.list-block {
+  width: 100%;
+  margin: 0 !important;
+}
+.list-block .list-unit {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.list-status-title {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  flex-direction: column;
+  width: 100% !important;
+  gap: 1rem;
+  padding: 1rem;
+  height: auto !important;
+}
+.list-status-title::before {
+  content: "theme link: github.com/Syncxv/mal-theme";
+  color: white;
+  /* make the variable none if you dont want this gg ez */
+  display: var(--show-github-link);
+}
+.list-status-title .text {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.list-status-title .stats {
+  position: unset !important;
+}
+.list-status-title .stats #show-stats-button {
+  display: none !important;
+}
+.list-status-title .stats #advanced-options-button {
+  margin: 0 !important;
+}
+
+/* avg score and stuff yk */
+.list-stats {
+  display: block !important;
+  width: 100% !important;
+}
+
+.icon-watch2,
+.icon-watch-pv2 {
+  display: none !important;
+}
+
+.status-menu-container {
+  position: sticky !important;
+  top: 0;
+  border: none;
+  width: 100%;
+  height: auto !important;
+  box-shadow: 0px 0px 12px 2px hsla(0deg, 0%, 0%, 0.18);
+}
+
+/*  CONTAINER FOR WHOLE THINGY */
+#list-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  border: none;
+  width: auto;
+  margin: 0;
+  background: linear-gradient(150deg, #cac0ff, #ffffff 25%);
+}
+
+.cover-block {
+  display: none !important;
+}
+
+.list-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 0.1fr));
+  row-gap: 3rem;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border: none !important;
+  /* idk why they did this but it use to be a near white color WHY? FOR WHAT REASON? */
+}
+.list-table > :first-child {
+  grid-column: 1/-1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* the anime, score, progress YEAH THAT the thingies where you can sort */
+}
+.list-table > :first-child .list-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+}
+.list-table > :first-child .list-table-header > * {
+  width: auto !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.list-table > :first-child .list-table-header .header-title {
+  background: none !important;
+  border: none !important;
+}
+.list-table > :first-child .list-table-header .header-title.image {
+  display: none !important;
+}
+.list-table > :first-child .list-table-header .header-title.number {
+  display: none !important;
+}
+.list-table > :first-child .list-table-header .header-title.tags {
+  display: none !important;
+}
+.list-table .list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+}
+.list-table .list-item .list-table-data {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 20rem;
+  height: 30rem;
+}
+.list-table .list-item .list-table-data .data {
+  border: none;
+}
+.list-table .list-item .list-table-data .data.status {
+  width: 50%;
+  border-radius: 500px;
+}
+.list-table .list-item .list-table-data .data.number {
+  display: none !important;
+}
+.list-table .list-item .list-table-data .data.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 14rem;
+  text-align: center;
+  max-width: 14rem;
+  text-align: center;
+}
+.list-table .list-item .list-table-data .data.score::before {
+  content: "Score:";
+  font-weight: bold;
+}
+.list-table .list-item .list-table-data .data.status.watching::after {
+  content: "Watching eh";
+  color: white;
+  font-weight: bold;
+}
+.list-table .list-item .list-table-data .data.status.completed::after {
+  content: "Completed eh";
+  color: white;
+  font-weight: bold;
+}
+.list-table .list-item .list-table-data .data.status.onhold::after {
+  content: "On Hold eh";
+  color: black;
+  font-weight: bold;
+}
+.list-table .list-item .list-table-data .data.status.dropped::after {
+  content: "Dropped eh";
+  color: white;
+  font-weight: bold;
+}
+.list-table .list-item .list-table-data .data.status.plantowatch::after {
+  content: "May or may not watch this";
+  color: black;
+  font-weight: bold;
+}
+.list-table .list-item .list-table-data .data.image .image {
+  width: 13rem;
+  height: auto;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 0px 12px 2px hsla(0deg, 0%, 0%, 0.18);
+}
+.list-table > tbody:nth-of-type(2n + 1) {
+  background-color: transparent;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #121212;
+  z-index: 2;
+  animation: bruh var(--title-screen-duration) cubic-bezier(0.55, 0.11, 0, 0.93) var(--title-screen-delay) forwards;
+}
+
+@keyframes bruh {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+body::after {
+  content: "good day :)";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  z-index: 999;
+  animation: bruh2 var(--title-text-duration) cubic-bezier(0.76, 0.06, 0.15, 0.93) var(--title-screen-delay) forwards;
+}
+
+@keyframes bruh2 {
+  100% {
+    transform: translate(-50%, -1000%);
+  }
+}

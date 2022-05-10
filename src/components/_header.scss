@@ -1,0 +1,32 @@
+.list-status-title {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    flex-direction: column;
+    width: 100% !important;
+    gap: 1rem;
+    padding: 1rem;
+    height: auto !important;
+    &::before {
+        content: "theme link: github.com/Syncxv/mal-theme";
+        color: white;
+        /* make the variable none if you dont want this gg ez */
+        display: var(--show-github-link);
+    }
+    .text {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stats {
+        position: unset !important;
+        #show-stats-button {
+            display: none !important;
+        }
+        #advanced-options-button {
+            margin: 0 !important;
+        }
+    }
+}
