@@ -179,6 +179,11 @@ body {
   color: white;
   font-weight: bold;
 }
+.list-table .list-item .list-table-data .data.status.reading::after {
+  content: "Reading eh";
+  color: white;
+  font-weight: bold;
+}
 .list-table .list-item .list-table-data .data.status.completed::after {
   content: "Completed eh";
   color: white;
